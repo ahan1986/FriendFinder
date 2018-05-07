@@ -15,13 +15,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //======================================================
-//friends array to add all the datas
-var friends = [];
 
-var router = require('./app/routing/htmlRoutes.js')
-app.use(router);
+var Route = require('./htmlRoutes.js')
+app.use(Route);
 
-var Routes = require('./app/routing/apiRoutes.js');
+var Routes = require('./apiRoutes.js');
 app.use(Routes);
 
 //======================================================
