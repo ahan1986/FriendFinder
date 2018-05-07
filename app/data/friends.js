@@ -3,7 +3,7 @@
 var friends = [
     {
         'name': 'Andrew',
-        'photo': "",
+        'photo': "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
         'scores': [
             3,
             4,

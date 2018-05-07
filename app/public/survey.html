@@ -168,7 +168,6 @@
                         <h1 class="modal-title">Best Match</h1>
                     </div>
                     <div class="modal-body" id="photoGoesHere">
-                        <h2>Hola!</h2>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -214,26 +213,40 @@
             })
 
             $.get('/api/friendsList', function (data) {
-                //   console.log(surveyArray);
-                var aa = [];
-                var b = surveyArray.map(x => parseInt(x));
-                var currentInputSum = b.reduce((a, b) => a + b);
+                var aa = []; //empty array to hold sum of values of each array
+                var b = surveyArray.map(x => parseInt(x)); //parseInt the values the current user inputed
+                var currentInputSum = b.reduce((a, b) => a + b); // getting the sum of the current users inputs
 
+                //looping through all the datas stored except the current
                 for (var i = 0; i < data.length; i++) {
-                    var bb = [];
+                    var bb = []; // empty array to hold each one array's total sum
+
                     for (var j = 0; j < data[i].scores.length; j++) {
-                        bb.push(parseInt(data[i].scores[j]));
+
+                        bb.push(parseInt(data[i].scores[j]));//parsing the value of each data in the array and pushing it to bb
                     }
 
-                    aa.push(bb.reduce((a, b) => a + b));
-                    console.log(bb);
+                    aa.push(bb.reduce((a, b) => a + b)); // pushing the total sum of each array into var aa
+                    var sumOfCurrentIndexDataArray = bb.reduce((a,b) => a + b); 
+                    console.log(sumOfCurrentIndexDataArray);
+                    
+                    // if however the current users sum is equal to the sum of the current index array then it will return that data's photo and the else if statements after that will match if it's only + or - 1 or 2 away.
+                    if(currentInputSum === sumOfCurrentIndexDataArray) {
+                        console.log(data[i]);
+                        // return data[i].photo;
+                        return $("#photoGoesHere").html('<img src='+ data[i].photo +'/>');
+                    } else if(currentInputSum - 1 == sumOfCurrentIndexDataArray ||currentInputSum  + 1 == sumOfCurrentIndexDataArray) {
+                        console.log('hello2');
+                        // return data[i].photo;
+                    } else if(currentInputSum - 2 == sumOfCurrentIndexDataArray ||currentInputSum  + 2 == sumOfCurrentIndexDataArray) {
+                        return data[i].photo;
+                    }
                 }
+                //if no value was either equal or plus or minus 1 or 2 away, all the sum will be sorted including the current users input and I will just get the value in front or behind it and go back through the array and select the data that has the same sum.  This is long and annoying.... I know. Hopefully the solutions file will show a better way of doing this.
                 console.log(aa);
 
                 aa.push(currentInputSum);
                 aa.sort((a, b) => a - b);
-                console.log(currentInputSum);
-                console.log(aa);
             })
 
         })
