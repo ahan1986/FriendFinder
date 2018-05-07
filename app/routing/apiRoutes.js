@@ -17,10 +17,9 @@ router.post('/api/friendsList', function(req, res) {
     var newFriend = req.body;
 
     console.log(newFriend);
-
     friends.push(newFriend);
-
     res.json(newFriend);
+    
 });
 
 module.exports = router;
