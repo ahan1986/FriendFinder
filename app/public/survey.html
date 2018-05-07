@@ -154,40 +154,41 @@
         <br>
 
 
-<!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" id="submit">Submit</button>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" id="submit">Submit</button>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h1 class="modal-title">Best Match</h1>
-      </div>
-      <div class="modal-body" id="photoGoesHere">
-        <h2>Hola!</h2>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title">Best Match</h1>
+                    </div>
+                    <div class="modal-body" id="photoGoesHere">
+                        <h2>Hola!</h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
 
-  </div>
-</div>
-<!--    000000000000000000000   -->
+            </div>
+        </div>
+        <!--    000000000000000000000   -->
         <hr>
 
         <div>
             <a href="/api/friendsList">API Friends List </a>|
             <a href="#"> Github Repo</a>
-        </div><br>
+        </div>
+        <br>
     </div>
     <script>
-        
-        $('#submit').on('click', function(event) {
+
+        $('#submit').on('click', function (event) {
             event.preventDefault();
 
             var surveyArray = [
@@ -208,9 +209,32 @@
                 photo: $('#image').val().trim(),
                 scores: surveyArray
             }
-          $.post('/api/friendsList', surveyBody).then(function(data) {
-              console.log(data);
-          })
+            $.post('/api/friendsList', surveyBody).then(function (data) {
+                //   console.log(data);
+            })
+
+            $.get('/api/friendsList', function (data) {
+                //   console.log(surveyArray);
+                var aa = [];
+                var b = surveyArray.map(x => parseInt(x));
+                var currentInputSum = b.reduce((a, b) => a + b);
+
+                for (var i = 0; i < data.length; i++) {
+                    var bb = [];
+                    for (var j = 0; j < data[i].scores.length; j++) {
+                        bb.push(parseInt(data[i].scores[j]));
+                    }
+
+                    aa.push(bb.reduce((a, b) => a + b));
+                    console.log(bb);
+                }
+                console.log(aa);
+
+                aa.push(currentInputSum);
+                aa.sort((a, b) => a - b);
+                console.log(currentInputSum);
+                console.log(aa);
+            })
 
         })
     </script>

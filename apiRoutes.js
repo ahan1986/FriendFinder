@@ -18,19 +18,19 @@ var friends = require('./app/data/friends.js');
 //route that will post information given through the users to this api
 router.post('/api/friendsList', function(req, res) {
     var newFriend = req.body;
-    console.log(newFriend);
+    // console.log(newFriend);
     friends.push(newFriend);
     return res.json(newFriend);
     
 });
 
 router.get('/api/friendsList', function(req, res) {
-    for(var i =0; i<friends.length; i++) {
-       var a = friends[i].scores;
-       for(var j =0; j<friends[i].scores.length; j++) {
-           console.log(parseInt(a[j]));
-       }
-    }
+    // for(var i =0; i<friends.length; i++) {
+    //    var a = friends[i].scores;
+    //    for(var j =0; j<friends[i].scores.length; j++) {
+    //        console.log(parseInt(a[j]));
+    //    }
+    // }
     
     return res.json(friends);
 })
