@@ -16,10 +16,10 @@ app.use(bodyParser.json());
 
 //======================================================
 
-var Route = require('./htmlRoutes.js')
+var Route = require('./app/routing/htmlRoutes.js')
 app.use(Route);
 
-var Routes = require('./apiRoutes.js');
+var Routes = require('./app/routing/apiRoutes.js');
 app.use(Routes);
 
 //======================================================
