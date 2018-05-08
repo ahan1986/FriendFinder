@@ -3,7 +3,7 @@
 var friends = [
     {
         'name': 'RickJames!',
-        'photo': "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
+        'photo': "https://upload.wikimedia.org/wikipedia/commons/4/41/Sunflower_from_Silesia2.jpg",
         'scores': [
             1,
             1,

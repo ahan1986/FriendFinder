@@ -267,7 +267,7 @@
                         var currentInputSum = b.reduce((a, b) => a + b); // getting the sum of the current users inputs
 
                         //looping through all the datas stored except the current
-                        for (var i = 0; i < data.length; i++) {
+                        for (var i = 0; i < data.length-1; i++) {
                             var bb = []; // empty array to hold each one array's total sum
 
                             for (var j = 0; j < data[i].scores.length; j++) {
