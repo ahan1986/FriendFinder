@@ -9,18 +9,9 @@
     <!-- Using Modal- Make sure the jQuery is on the top-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
         crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
@@ -40,12 +31,12 @@
                 <label>
                     <h4>Name (Required)</h4>
                 </label>
-                <input type='text' class='form-control' id='name'>
+                <input type='text' class='form-control Required' id='name'>
 
                 <label>
                     <h4>Link to Photo Image (Required)</h4>
                 </label>
-                <input type='text' class='form-control' id='image'>
+                <input type='text' class='form-control Required' id='image'>
             </div>
         </form>
         <hr>
@@ -53,111 +44,121 @@
         <h3>Question 1</h3>
         <h4>How do you respond to stress?</h4>
         <form>
-            <select id='q1'>
-                <option value='1'>1</option>
+            <select id='q1' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 2</h3>
         <h4>My goals in life are clear</h4>
         <form>
-            <select id='q2'>
-                <option value='1'>1</option>
+            <select id='q2' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 3</h3>
         <h4>If people are rude to me I just shrug it off</h4>
         <form>
-            <select id='q3'>
-                <option value='1'>1</option>
+            <select id='q3' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 4</h3>
         <h4>I am confident in what I do</h4>
         <form>
-            <select id='q4'>
-                <option value='1'>1</option>
+            <select id='q4' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 5</h3>
         <h4>I consistently put full time and effort into everything I do</h4>
         <form>
-            <select id='q5'>
-                <option value='1'>1</option>
+            <select id='q5' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 6</h3>
         <h4>I prefer achieving my goals than assisting others to achieve their goals</h4>
         <form>
-            <select id='q6'>
-                <option value='1'>1</option>
+            <select id='q6' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 7</h3>
         <h4>I would describe myself as an extremely competent person</h4>
         <form>
-            <select id='q7'>
-                <option value='1'>1</option>
+            <select id='q7' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 8</h3>
         <h4>I prefer working within a stable rather than flexible environment</h4>
         <form>
-            <select id='q8'>
-                <option value='1'>1</option>
+            <select id='q8' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 9</h3>
         <h4>It's better to get a job done than aim for perfection</h4>
         <form>
-            <select id='q9'>
-                <option value='1'>1</option>
+            <select id='q9' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <h3>Question 10</h3>
         <h4>I am able to complete tasks as well as, or better than other people</h4>
         <form>
-            <select id='ques10'>
-                <option value='1'>1</option>
+            <select id='ques10' class="required">
+                <option value=''>--Select an Option--</option>
+                <option value='1'>1 (Strongly Disagree)</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
                 <option value='4'>4</option>
-                <option value='5'>5</option>
+                <option value='5'>5 (Strongly Agree)</option>
             </select>
         </form>
         <br>
@@ -165,7 +166,7 @@
 
         <!-- Trigger the modal with a button    data-toggle="modal" data-target="#myModal"  -->
 
-        <button type="button" class="btn btn-primary btn-block" id="submit">Open Modal</button>
+        <button type="button" class="btn btn-primary btn-block" id="submit">Submit</button>
 
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -175,7 +176,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <h4 class="modal-title">Closest Match!</h4>
                     </div>
                     <div class="modal-body" id="photoGoesHere">
 
@@ -188,6 +189,26 @@
             </div>
         </div>
 
+        <!-- Modal FOR VALIDATION! -->
+        <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title" style='text-align: center'>ERROR!</h1>
+                    </div>
+                    <div class="modal-body" id="error">
+                        <h4 style='text-align: center'>Please fill out all fields before submitting!!!</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <!--    000000000000000000000   -->
         <hr>
 
@@ -222,82 +243,96 @@
                     photo: $('#image').val().trim(),
                     scores: surveyArray
                 }
-                $.post('/api/friendsList', surveyBody).then(function (data) {
-                    //   console.log(data);
-                })
 
-                $.get('/api/friendsList', function (data) {
-                    console.log(data);
-                    var aa = []; //empty array to hold sum of values of each array
-                    var b = surveyArray.map(x => parseInt(x)); //parseInt the values the current user inputed
-                    var currentInputSum = b.reduce((a, b) => a + b); // getting the sum of the current users inputs
+// Validation for user Input questions! -Start------
+                if($('#name').val().trim() === '' || $('#image').val().trim() === '') {
+                    return $("#myModal1").modal();
+                }
 
-                    //looping through all the datas stored except the current
-                    for (var i = 0; i < data.length; i++) {
-                        var bb = []; // empty array to hold each one array's total sum
+                for (var p = 0; p < surveyArray.length; p++) {
+                    if (surveyArray[p] === '') {
+                        return $("#myModal1").modal();
+                    }
+                }
+// Validation for user Input questions! -Finish------
 
-                        for (var j = 0; j < data[i].scores.length; j++) {
+                    $.post('/api/friendsList', surveyBody).then(function (data) {
+                        //   console.log(data);
+                    })
 
-                            bb.push(parseInt(data[i].scores[j]));//parsing the value of each data in the array and pushing it to bb
-                        }
+                    $.get('/api/friendsList', function (data) {
+                        console.log(data);
+                        var aa = []; //empty array to hold sum of values of each array
+                        var b = surveyArray.map(x => parseInt(x)); //parseInt the values the current user inputed
+                        var currentInputSum = b.reduce((a, b) => a + b); // getting the sum of the current users inputs
 
-                        aa.push(bb.reduce((a, b) => a + b)); // pushing the total sum of each array into var aa
-                        var sumOfCurrentIndexDataArray = bb.reduce((a, b) => a + b);
+                        //looping through all the datas stored except the current
+                        for (var i = 0; i < data.length; i++) {
+                            var bb = []; // empty array to hold each one array's total sum
+
+                            for (var j = 0; j < data[i].scores.length; j++) {
+
+                                bb.push(parseInt(data[i].scores[j]));//parsing the value of each data in the array and pushing it to bb
+                            }
+
+                            aa.push(bb.reduce((a, b) => a + b)); // pushing the total sum of each array into var aa
+                            var sumOfCurrentIndexDataArray = bb.reduce((a, b) => a + b);
 
 
-                        // if however the current users sum is equal to the sum of the current index array then it will return that data's photo and the else if statements after that will match if it's only + or - 1 or 2 away.
+                            // if however the current users sum is equal to the sum of the current index array then it will return that data's photo and the else if statements after that will match if it's only + or - 1 or 2 away.
+                            console.log(currentInputSum);
+                            console.log(sumOfCurrentIndexDataArray);
+                            if (currentInputSum === sumOfCurrentIndexDataArray) {
+                                console.log('1');
+                                $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
+                                return $("#myModal").modal();
+                            } else if (currentInputSum - 1 == sumOfCurrentIndexDataArray || currentInputSum + 1 == sumOfCurrentIndexDataArray) {
+                                console.log('2');
+                                $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
+                                return $("#myModal").modal();
+                            } else if (currentInputSum - 2 == sumOfCurrentIndexDataArray || currentInputSum + 2 == sumOfCurrentIndexDataArray) {
+                                console.log('3');
+                                $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
+                                return $("#myModal").modal();
+                            }
+                            console.log('4');
+                        }//end of the First For-Loop
 
-                        if (currentInputSum === sumOfCurrentIndexDataArray) {
-                            console.log('1');
-                            $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
-                            return $("#myModal").modal();
-                        } else if (currentInputSum - 1 == sumOfCurrentIndexDataArray || currentInputSum + 1 == sumOfCurrentIndexDataArray) {
-                            console.log('2');
-                            $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
-                            return $("#myModal").modal();
-                        } else if (currentInputSum - 2 == sumOfCurrentIndexDataArray || currentInputSum + 2 == sumOfCurrentIndexDataArray) {
-                            console.log('3');
-                            $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
-                            return $("#myModal").modal();
-                        }
-                        console.log('4');
-                    }//end of the First For-Loop
+                        //if no value was either equal or plus or minus 1 or 2 away, all the sum will be sorted including the current users input and I will just get the value in front or behind it and go back through the array and select the data that has the same sum.  This is long and annoying.... I know. Hopefully the solution-file will show a better way of doing this.
 
-                    //if no value was either equal or plus or minus 1 or 2 away, all the sum will be sorted including the current users input and I will just get the value in front or behind it and go back through the array and select the data that has the same sum.  This is long and annoying.... I know. Hopefully the solution-file will show a better way of doing this.
+                        aa.push(currentInputSum);
+                        aa.sort((a, b) => a - b);
+                        var jack = 0;
 
-                    aa.push(currentInputSum);
-                    aa.sort((a, b) => a - b);
-                    var jack = 0;
+                        for (var z = 0; z < aa.length; z++) {
 
-                    for (var z = 0; z < aa.length; z++) {
-
-                        if (currentInputSum == aa[z]) {
-                            if (aa[z + 1] == undefined) {
-                                jack += aa[z - 1];
-                                break;
-                            } else {
-                                jack += aa[z + 1];
-                                break;
+                            if (currentInputSum == aa[z]) {
+                                if (aa[z + 1] == undefined) {
+                                    jack += aa[z - 1];
+                                    break;
+                                } else {
+                                    jack += aa[z + 1];
+                                    break;
+                                }
                             }
                         }
-                    }
-                    console.log('5');
-                    for (var q = 0; q < data.length; q++) {
-                        var dd = [];
-                        for (var t = 0; t < data[q].length; t++) {
-                            dd.push(parseInt(data[q].scores[t]));//parsing the value of each data in the array and pushing it to dd
+                        console.log('5');
+                        for (var q = 0; q < data.length; q++) {
+                            var dd = [];
+                            for (var t = 0; t < data[q].length; t++) {
+                                dd.push(parseInt(data[q].scores[t]));//parsing the value of each data in the array and pushing it to dd
+                            }
+                            var ee = dd.reduce((a, b) => a + b);
+                            console.log(ee);
+                            if (currentInputSum == ee) {
+                                $("#photoGoesHere").html('<img src="' + data[q].photo + '"/>');
+                                return $("#myModal").modal();
+                            }
                         }
-                        var ee = dd.reduce((a, b) => a + b);
-                        console.log(ee);
-                        if (currentInputSum == ee) {
-                            $("#photoGoesHere").html('<img src="' + data[q].photo + '"/>');
-                            return $("#myModal").modal();
-                        }
-                    }
-                    console.log('6')
-                    return $("#photoGoesHere").html('<img src=' + data[0].photo + '/>');
-                    // my eyes hurt a lot from starring at this stupid screen!
-                });
+                        console.log('6')
+                        return $("#photoGoesHere").html('<img src=' + data[0].photo + '/>');
+                        // my eyes hurt a lot from starring at this stupid screen!
+                    });
             });
         });
     </script>
