@@ -248,16 +248,19 @@
                     // if however the current users sum is equal to the sum of the current index array then it will return that data's photo and the else if statements after that will match if it's only + or - 1 or 2 away.
 
                     if (currentInputSum === sumOfCurrentIndexDataArray) {
+                        console.log('1');
                         $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
                         return $("#myModal").modal();
                     } else if (currentInputSum - 1 == sumOfCurrentIndexDataArray || currentInputSum + 1 == sumOfCurrentIndexDataArray) {
+                        console.log('2');
                         $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
                         return $("#myModal").modal();
                     } else if (currentInputSum - 2 == sumOfCurrentIndexDataArray || currentInputSum + 2 == sumOfCurrentIndexDataArray) {
+                        console.log('3');
                         $("#photoGoesHere").html('<img src="' + data[i].photo + '"/>');
                         return $("#myModal").modal();
                     }
-
+                    console.log('4');
                 }//end of the First For-Loop
 
                 //if no value was either equal or plus or minus 1 or 2 away, all the sum will be sorted including the current users input and I will just get the value in front or behind it and go back through the array and select the data that has the same sum.  This is long and annoying.... I know. Hopefully the solution-file will show a better way of doing this.
@@ -278,20 +281,22 @@
                         }
                     }
                 }
-
+                console.log(5);
                     for (var q = 0; q < data.length; q++) {
                         var dd = [];
                         for(var t=0; t<data[q].length; t++) {
                             dd.push(parseInt(data[q].scores[t]));//parsing the value of each data in the array and pushing it to dd
                         }
                         var ee = dd.reduce((a,b) => a + b);
+                        console.log(ee);
                         if(currentInputSum == ee) {
                             $("#photoGoesHere").html('<img src="' + data[q].photo + '"/>');
                             return $("#myModal").modal();
                         } 
                     }
+
                 return $("#photoGoesHere").html('<img src=' + data[0].photo + '/>');
-// my eyes hurt a lot from starring at this stupid screen!
+                // my eyes hurt a lot from starring at this stupid screen!
             });
         });
     });
