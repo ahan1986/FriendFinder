@@ -321,6 +321,7 @@
                             for (var t = 0; t < data[q].length; t++) {
                                 dd.push(parseInt(data[q].scores[t]));//parsing the value of each data in the array and pushing it to dd
                             }
+                            console.log(dd);
                             var ee = dd.reduce((a, b) => a + b);
                             console.log(ee);
                             if (currentInputSum == ee) {
